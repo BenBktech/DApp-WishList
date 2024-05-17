@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General */
+.app {
+  @apply flex flex-col min-h-screen;
+  background: rgb(225,243,171);
+  background: linear-gradient(31deg, rgba(225,243,171,1) 0%, rgba(255,255,255,1) 13%, rgba(255,255,255,1) 81%, rgba(225,243,171,1) 100%);
+}
+
+.navbar {
+  @apply flex-between px-10 py-5 bg-white border-b;
+}
+
+.main {
+  @apply flex-center grow h-full;
+}
+
+.footer {
+  @apply w-full flex-center p-10;
+}
+
+/* Helpers */
+.flex-between {
+  @apply flex justify-between items-center;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+/* HOME */
+.home, .add, .get {
+  @apply w-full h-fit;
+}
+
+.home_inner {
+  @apply text-center max-w-5xl m-auto p-5;
+}
+
+.home_inner_title {
+  @apply text-4xl md:text-6xl font-extrabold tracking-tighter text-gray-900 mb-5;
+}
+
+.home_inner_title_colored {
+  @apply bg-gradient-to-r from-[#75fd38] to-[#e1f3ab] bg-clip-text text-transparent;
+}
+
+.home_inner_description {
+  @apply text-xl text-gray-600;
+}
+
+.home_inner_links {
+  @apply mt-5 flex-center;
+}
+
+.home_inner_links_button1 {
+  @apply bg-[#75fd38] border-none rounded-none text-gray-900;
+}
+
+.home_inner_links_button2 {
+  @apply rounded-none bg-gray-900 hover:bg-gray-900;
+}
+
+/* Add */
+.add_inner {
+  @apply max-w-5xl m-auto p-5;
+}
+
+.add_inner_title {
+  @apply text-4xl font-extrabold leading-none tracking-tight text-gray-900 mb-5;
+}
+
+.add_inner_title_colored {
+  @apply bg-gradient-to-r from-[#75fd38] to-[#e1f3ab] bg-clip-text text-transparent;
+}
+
+.add_inner_form_item {
+  @apply grid w-full items-center gap-1.5;
+}
+
+.add_inner_submit_button {
+  @apply bg-[#75fd38] border-none rounded-none text-gray-900 w-full mt-5;
+}
+
+/* Get */
+.get_inner {
+  @apply max-w-5xl m-auto p-5;
+}
+
+.get_inner_title {
+  @apply text-4xl font-extrabold leading-none tracking-tight text-gray-900 mb-5;
+}
+
+.get_inner_title_colored {
+  @apply bg-gradient-to-r from-[#75fd38] to-[#e1f3ab] bg-clip-text text-transparent;
+}
+
+.get_inner_form_item {
+  @apply grid w-full items-center gap-1.5;
+}
+
+.get_inner_submit_button {
+  @apply bg-[#75fd38] border-none rounded-none text-gray-900 w-full mt-5;
+}
+
+.get_inner_badge_bought {
+  @apply hover:bg-[#75fd38] bg-[#75fd38] text-gray-900;
+}
+
+.get_inner_badge_not_bought {
+  @apply hover:bg-sky-400 bg-sky-400;
+}
+
+.get_inner_buy_button {
+  @apply bg-[#75fd38] border-none rounded-none text-gray-900;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
